@@ -8,6 +8,7 @@ class RingBuffer:
         if self.current < self.capacity:
             self.storage[self.current] = item
             self.current += 1
+
         if self.current == self.capacity:
             self.current = 0
 
