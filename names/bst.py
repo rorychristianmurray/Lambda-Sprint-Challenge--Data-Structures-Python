@@ -1,5 +1,5 @@
-from dll_stack_bst import Stack
-from dll_queue_bst import Queue
+from dll_stack import Stack
+from dll_queue import Queue
 
 
 class BinarySearchTree:

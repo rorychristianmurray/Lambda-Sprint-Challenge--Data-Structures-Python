@@ -1,4 +1,4 @@
-from dll_bst import DoublyLinkedList
+from dll import DoublyLinkedList
 # import sys
 # sys.path.append('../doubly_linked_list')
 
