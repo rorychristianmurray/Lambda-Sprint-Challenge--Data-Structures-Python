@@ -47,7 +47,9 @@ class LinkedList:
         # TO BE COMPLETED
         swap = None
         node = self.head
-        while swap is not None:
-            buffer = node
-            node = swap
-            swap = buffer
+        while node is not None:
+            buffer = node.next_node
+            node.set_next(swap)
+            swap = node
+            node = buffer
+        self.head = swap
