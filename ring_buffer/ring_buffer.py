@@ -5,13 +5,11 @@ class RingBuffer:
         self.storage = [None]*capacity
 
     def append(self, item):
-
-        # print(f"self.storage[0] bd : {self.storage[0]}")
-        del self.storage[0]
-        # print(f"self.storage[0] ad : {self.storage[0]}")
-        # print(f"self.storage bi : {self.storage}")
-        self.storage.append(item)
-        # print(f"self.storage ai : {self.storage}")
+        if self.current < self.capacity:
+            self.storage[self.current] = item
+            self.current += 1
+        if self.current == self.capacity:
+            self.current = 0
 
     def get(self):
         temp = []
